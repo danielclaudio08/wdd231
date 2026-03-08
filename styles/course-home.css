@@ -1,0 +1,23 @@
+#menu-button {
+  display: block;
+}
+
+.links {
+  display: none;
+}
+
+.links.open {
+  display: block;
+}
+
+@media (min-width: 768px) {
+
+  #menu-button {
+    display: none;
+  }
+
+  .links {
+    display: flex;
+  }
+
+}

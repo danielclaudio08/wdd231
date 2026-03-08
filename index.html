@@ -1,11 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WDD 231</title>
+  <title>WDD 231 - Course Home Page</title>
+  <meta name="description"
+    content="WDD 231 - Web Frontend Development I. Course Home Page. This is a home page containing links, web certificate courses, and projects.">
+  <meta name="author" content="Daniel Claudio">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/course-home.css">
+  <script src="scripts/course-home.js" defer></script>
 </head>
+
 <body>
-  <h1>WDD 231 - Daniel Claudio</h1>
+  <header>
+    <div class="site">
+      <img src="images/commerce-logo.svg" width="150" alt="Chamber of Commerce Logo" class="logo">
+      <span class="site-name">Daniel Claudio</span>
+      <button id="menu-button" aria-label="Menu">&#9776;</button>
+    </div>
+    <nav>
+      <ul class="links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="chamber.html">Chamber Project</a></li>
+        <li><a href="final.html">Final Project</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Home</h1>
+    <section class="bio">
+      <h2>About Me</h2>
+      <p>My name is Daniel Claudio. I was born in the Philippines and currently live in Quezon City. I enjoy watching
+        nature documentaries, inspiring movies, and meaningful series that teach valuable life lessons and help me see
+        the world from different perspectives. I got married two years ago to my wonderful wife, and we are both
+        currently studying as we work together to build a strong foundation for our future.
+      </p>
+      <p>I am passionate about learning and improving myself, especially in areas that can help me grow personally and
+        professionally. I have become interested in web development because I enjoy creating things and
+        solving problems. I am excited to learn more about HTML, CSS, and other web technologies, and I hope to apply
+        the skills I gain to create meaningful and useful projects in the future. My goal is to continue developing my
+        abilities so that I can contribute positively to my career, my family, and the community around me.
+      </p>
+    </section>
+    <section class="portrait">
+      <h2>Student Photo</h2>
+      <div class="mypic">
+        <img src="images/profile.jpg" width="250" alt="Profile Picture">
+      </div>
+    </section>
+    <section class="certificate">
+      <h2>Web Certificate Courses</h2>
+      <div id="courses"></div>
+    </section>
+  </main>
+  <footer>
+    <nav class="accounts">
+      <a href="https://www.linkedin.com/in/danielclaudio/" target="_blank" rel="noopener noreferrer">
+        <img src="images/linkedin.svg" alt="LinkedIn">
+      </a>
+      <a href="https://github.com/danielclaudio08/wdd231" target="_blank" rel="noopener noreferrer">
+        <img src="images/github.svg" alt="GitHub">
+      </a>
+      <a href="https://www.facebook.com/claudio.daniel.843158" target="_blank" rel="noopener noreferrer">
+        <img src="images/facebook.svg" alt="Facebook">
+      </a>
+    </nav>
+    <p>
+      © <span id="currentyear"></span> • Daniel Claudio • Quezon City, Philippines
+    </p>
+    <p>
+      Last Modification: <span id="lastModified"></span>
+    </p>
+  </footer>
 </body>
+
 </html>
