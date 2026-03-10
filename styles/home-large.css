@@ -1,0 +1,90 @@
+@media (min-width: 768px) {
+  #menu-button {
+    display: none;
+  }
+
+  nav .links {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+  }
+
+  .links.open {
+    display: flex !important;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .site {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
+  }
+
+  .links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    width: 100%;
+  }
+
+  .links {
+    margin-top: 1rem;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+
+  main {
+    max-width: 100%;
+    margin: 0;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 1rem;
+  }
+
+  main h1 {
+    grid-column: 1 / 3;
+    margin-top: 0.5rem;
+  }
+
+  .bio {
+    grid-column: 1 / 2;
+  }
+
+  .portrait {
+    grid-column: 2 / 3;
+  }
+
+  .certificate {
+    grid-column: 1 / 3;
+  }
+
+  #courses {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .filters {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .mypic {
+    width: 100%;
+    max-width: 500px;
+    margin: 2rem auto 2rem auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .mypic img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    border-radius: 5px;
+    display: block;
+  }
+}
