@@ -19,7 +19,7 @@ h2 {
 
 header {
   background-color: var(--color-secondary);
-  color: var(--color-secondary);
+  color: var(--color-primary);
   padding: 1rem;
 }
 
