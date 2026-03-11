@@ -8,7 +8,7 @@ menuButton.addEventListener("click", () => {
     nav.classList.contains("open") ? "✖" : "☰";
 });
 
-const currentPage = window.location.pathname.split("/").pop();
+const currentPage = window.location.pathname.split("/").pop() || "index.html";
 
 const navLinks = document.querySelectorAll(".links a");
 
