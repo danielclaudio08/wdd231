@@ -149,10 +149,6 @@ h2 {
   cursor: pointer;
 }
 
-.filters button:hover {
-  text-decoration: underline;
-}
-
 .filters button.active-filter {
   background-color: var(--color-accent);
   color: var(--color-primary);
