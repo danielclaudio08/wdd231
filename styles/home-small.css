@@ -150,7 +150,7 @@ h2 {
 }
 
 .filters button:hover {
-  background: var(--color-secondary);
+  text-decoration: underline;
 }
 
 .filters button.active-filter {
