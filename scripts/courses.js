@@ -109,18 +109,31 @@ function displayCourses(courseList) {
 
 }
 
+function setActiveFilter(buttonId) {
+  const buttons = document.querySelectorAll(".filters button")
+
+  buttons.forEach(button => {
+    button.classList.remove("active-filter");
+  });
+
+  document.querySelector(`#${buttonId}`).classList.add("active-filter");
+}
+
 displayCourses(courses);
 
 document.querySelector("#all").addEventListener("click", () => {
   displayCourses(courses);
+  setActiveFilter("all");
 });
 
 document.querySelector("#wdd").addEventListener("click", () => {
   const filtered = courses.filter(course => course.subject === "WDD");
   displayCourses(filtered);
+  setActiveFilter("wdd");
 });
 
 document.querySelector("#cse").addEventListener("click", () => {
   const filtered = courses.filter(course => course.subject === "CSE");
   displayCourses(filtered);
+  setActiveFilter("cse");
 });

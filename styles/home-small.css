@@ -58,6 +58,7 @@ header {
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-top: 1rem;
 }
 
 .links.open {
@@ -66,16 +67,22 @@ header {
 
 .links a {
   display: block;
-  width: 100%;
   padding: 0.75rem 1rem;
   text-decoration: none;
   color: var(--color-primary);
   transition: background 0.3s, color 0.3s;
+  border-radius: 10px;
 }
 
 .links a:hover {
   background-color: var(--color-primary);
   color: var(--color-tertiary);
+}
+
+.links a.active {
+  background-color: var(--color-primary);
+  color: var(--color-tertiary);
+  font-weight: bold;
 }
 
 main {
@@ -143,7 +150,14 @@ h2 {
 }
 
 .filters button:hover {
-  background: var(--color-tertiary);
+  background: var(--color-secondary);
+}
+
+.filters button.active-filter {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  font-weight: bold;
+  font-size: 20px;
 }
 
 #courses {
@@ -185,7 +199,6 @@ footer p {
   margin: 0;
   padding: 1rem;
 }
-
 
 @media (min-width: 480px) {
   .logo {

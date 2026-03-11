@@ -12,7 +12,7 @@
   .links.open {
     display: flex !important;
     flex-direction: row;
-    gap: 2rem;
+    gap: 1rem;
   }
 
   .site {
@@ -27,7 +27,7 @@
     justify-content: center;
     align-items: center;
     padding: 0.75rem 1rem;
-    width: 100%;
+    border-radius: 5px;
   }
 
   .links {
