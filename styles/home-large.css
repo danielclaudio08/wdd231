@@ -30,6 +30,11 @@
     border-radius: 5px;
   }
 
+  .links a:hover {
+    background-color: var(--color-primary);
+    color: var(--color-tertiary);
+  }
+
   .links {
     margin-top: 1rem;
     padding-left: 0;
@@ -71,6 +76,10 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .filters button:hover {
+    text-decoration: underline;
+  }
+
   .mypic {
     width: 100%;
     max-width: 500px;
@@ -86,9 +95,5 @@
     max-width: 400px;
     border-radius: 5px;
     display: block;
-  }
-
-  .filters button:hover {
-    text-decoration: underline;
   }
 }
