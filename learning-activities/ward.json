@@ -1,0 +1,23 @@
+{
+  "family_name": "Garcia",
+  "date_move_in": "2024-12-04",
+  "number_of_people": 3,
+  "visited_by_bishopric": true,
+  "family_members": [
+    {
+      "name": "Michael Garcia",
+      "gender": "Male",
+      "birthdate": "2001-01-02"
+    },
+    {
+      "name": "Anna Garcia",
+      "gender": "Female",
+      "birthdate": "1999-09-07"
+    },
+    {
+      "name": "Zeus Gracia",
+      "gender": "Male",
+      "birthdate": "1997-05-23"
+    }
+  ]
+}
