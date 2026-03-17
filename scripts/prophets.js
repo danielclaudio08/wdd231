@@ -12,7 +12,7 @@ const displayProphets = (prophets) => {
     birthPlace.textContent = `Place of Birth: ${prophet.birthplace}`;
 
     portrait.setAttribute('src', prophet.imageurl);
-    portrait.setAttribute('alt', `Portrait of ${prophet.name} ${prophet.lastName}`);
+    portrait.setAttribute('alt', `Portrait of ${prophet.name} ${prophet.lastname}`);
     portrait.setAttribute('loading', 'lazy');
     portrait.setAttribute(`width`, 340);
     portrait.setAttribute(`height`, 440);
@@ -27,7 +27,7 @@ const displayProphets = (prophets) => {
 }
 
 const url = 'https://byui-cse.github.io/cse-ww-program/data/latter-day-prophets.json';
-const card = document.querySelector('#cards');
+const cards = document.querySelector('#cards');
 
 async function getProphetData() {
   const response = await fetch(url);
