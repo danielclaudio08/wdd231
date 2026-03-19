@@ -1,5 +1,5 @@
 /* FETCH & RENDER MEMBERS */
-const url = "data/companies.json";
+const url = "data/members.json";
 const container = document.querySelector("#companies");
 
 async function getMembers() {
