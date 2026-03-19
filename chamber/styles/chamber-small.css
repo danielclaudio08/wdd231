@@ -8,14 +8,14 @@
 :root.dark {
   --background: hsl(0, 0%, 7%);
   --surface: hsl(0, 0%, 7%);
-  --primary: #BB86FC;
-  --primary-variant: #3700B3;
-  --secondary: #03DAC6;
+  --primary: hsl(265, 100%, 74%);
+  --primary-variant: hsl(265, 100%, 35%);
+  --secondary: hsl(174, 100%, 43%);
 
-  --on-background: #FFFFFF;
-  --on-surface: #FFFFFF;
-  --on-primary: #000000;
-  --on-secondary: #000000;
+  --on-background: hsl(0, 0%, 100%);
+  --on-surface: hsl(0, 0%, 100%);
+  --on-primary: hsl(0, 0%, 0%);
+  --on-secondary: hsl(0, 0%, 0%);
 }
 
 /* BASE */
@@ -23,8 +23,8 @@ body {
   margin: 0;
   line-height: 1.6;
   font-family: "Roboto", sans-serif;
-  background-color: var(--background, #fff);
-  color: var(--on-background, #000);
+  background-color: var(--background, hsl(0, 0%, 100%));
+  color: var(--on-background, hsl(0, 0%, 0%));
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -155,8 +155,8 @@ nav {
 /* MAIN CONTENT */
 main {
   padding: 0 1rem;
-  background-color: var(--background, #fff);
-  color: var(--on-background, #000);
+  background-color: var(--background, hsl(0, 0%, 100%));
+  color: var(--on-background, hsl(0, 0%, 0%));
   transition: background-color 0.3s, color 0.3s;
 }
 
