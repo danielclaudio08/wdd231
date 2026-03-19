@@ -1,0 +1,249 @@
+/* DESKTOP VIEW (min-width: 768px) */
+@media (min-width: 768px) {
+
+  /* HEADER LAYOUT */
+  header {
+    display: flex;
+    align-items: center;
+    padding: 1rem 5rem;
+  }
+
+  .site {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    gap: 1rem;
+  }
+
+  .logo {
+    width: 120px;
+    object-fit: contain;
+    border-radius: 5px;
+  }
+
+  .site-name {
+    font-size: 30px;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+    width: auto;
+  }
+
+  nav .links {
+    display: flex;
+    gap: 0.5rem;
+    margin: 0;
+    background: none;
+  }
+
+  #menu-button {
+    display: none;
+  }
+
+  #dark-mode {
+    margin-left: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #dark-mode img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s ease;
+  }
+
+  #dark-mode img:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+  }
+
+  /* MAIN */
+  main {
+    margin: auto 5rem;
+  }
+
+  /* VIEW BUTTONS */
+  #grid,
+  #list {
+    transition: background-color 0.2s ease, transform 0.1s ease;
+  }
+
+  .dark #grid:hover,
+  .dark #list:hover {
+    background: hsl(208, 50%, 90%);
+    transform: scale(1.05);
+  }
+
+  .view-buttons {
+    gap: 2.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .view-buttons button {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    font-size: 1rem;
+    padding: 0;
+  }
+
+  /* DIRECTORY LIST VIEW */
+  #companies.list section {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1.5fr;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+  }
+
+  .dark #companies.list section {
+    background: var(--surface);
+  }
+
+  #companies.list h2,
+  #companies.list p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+    font-size: 0.95rem;
+  }
+
+  #companies.list .address,
+  #companies.list .phone,
+  #companies.list .url {
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+  }
+
+  #companies.list h2 {
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+  }
+
+  #companies.list a {
+    color: var(--color-tertiary);
+    text-decoration: none;
+  }
+
+  .dark #companies.list a {
+    color: var(--primary);
+  }
+
+  #companies.list img {
+    display: none;
+  }
+
+  /* DIRECTORY GRID VIEW */
+  #companies.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  #companies.grid section {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-template-areas:
+      "img title"
+      "img address"
+      "img phone"
+      "img url";
+    gap: 0.75rem;
+    border-radius: 10px;
+    padding: 1rem;
+    min-height: 200px;
+    align-items: center;
+  }
+
+  #companies.grid img {
+    grid-area: img;
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+    padding-left: 0.5rem;
+  }
+
+  #companies.grid h2 {
+    grid-area: title;
+    text-align: left;
+    padding-left: 1rem;
+  }
+
+  #companies.grid .address {
+    grid-area: address;
+    padding-left: 1rem;
+  }
+
+  #companies.grid .phone {
+    grid-area: phone;
+    padding-left: 1rem;
+  }
+
+  #companies.grid .url {
+    grid-area: url;
+    padding-left: 1rem;
+  }
+
+  #companies.grid p {
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    word-wrap: break-word;
+  }
+
+  #companies.grid a {
+    word-break: break-all;
+  }
+
+  .dark #companies.grid section {
+    background: var(--surface);
+  }
+
+  /* FOOTER */
+  .footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-left,
+  .footer-right {
+    margin: auto 5rem;
+  }
+
+  .accounts img {
+    width: 60px;
+    height: auto;
+    transition: transform 0.3s;
+    filter: brightness(0) invert(1);
+  }
+
+  .dark footer {
+    border-top: 1px solid hsl(208, 50%, 90%);
+  }
+
+  /* EXTRA LARGE SCREENS */
+  @media (min-width: 1024px) {
+    #companies.grid {
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+
+    #companies.grid section {
+      grid-template-columns: 150px 1fr;
+    }
+
+    #companies.grid img {
+      height: 150px;
+    }
+  }
+}

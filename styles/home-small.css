@@ -74,8 +74,6 @@ header {
   border-radius: 10px;
 }
 
-
-
 .links a.active {
   background-color: var(--color-primary);
   color: var(--color-tertiary);

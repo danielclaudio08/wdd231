@@ -1,0 +1,74 @@
+{
+  "companies": [
+    {
+      "name": "MetroTech Solutions",
+      "address": "123 Aurora Blvd, Quezon City",
+      "phone": "+63 912 345 6789",
+      "website": "https://metrotechsolutions.com",
+      "image": "tech-solutions.jpg",
+      "membership": 3,
+      "industry": "IT Services",
+      "description": "Provides software development and IT consulting services."
+    },
+    {
+      "name": "GreenLeaf Cafe",
+      "address": "45 Katipunan Ave, Quezon City",
+      "phone": "+63 917 234 5678",
+      "website": "https://greenleafcafe.com",
+      "image": "cafe.jpg",
+      "membership": 2,
+      "industry": "Food & Beverage",
+      "description": "A cozy cafe offering organic meals and specialty coffee."
+    },
+    {
+      "name": "PrimeBuild Construction",
+      "address": "78 Commonwealth Ave, Quezon City",
+      "phone": "+63 918 456 7890",
+      "website": "https://primebuildco.com",
+      "image": "construction.jpg",
+      "membership": 3,
+      "industry": "Construction",
+      "description": "Specializes in residential and commercial construction projects."
+    },
+    {
+      "name": "Urban Style Boutique",
+      "address": "12 Tomas Morato Ave, Quezon City",
+      "phone": "+63 919 567 8901",
+      "website": "https://urbanstyleboutique.com",
+      "image": "urban-botique.jpg",
+      "membership": 1,
+      "industry": "Retail",
+      "description": "Fashion boutique offering modern and trendy apparel."
+    },
+    {
+      "name": "HealthFirst Clinic",
+      "address": "90 East Ave, Quezon City",
+      "phone": "+63 920 678 9012",
+      "website": "https://healthfirstclinic.com",
+      "image": "clinic.jpg",
+      "membership": 2,
+      "industry": "Healthcare",
+      "description": "Provides general medical services and wellness programs."
+    },
+    {
+      "name": "BrightPath Learning Center",
+      "address": "34 Maginhawa St, Quezon City",
+      "phone": "+63 921 789 0123",
+      "website": "https://brightpathlearning.com",
+      "image": "learning-center.jpg",
+      "membership": 1,
+      "industry": "Education",
+      "description": "Offers tutoring and skill development programs for students."
+    },
+    {
+      "name": "AutoCare Garage",
+      "address": "56 Mindanao Ave, Quezon City",
+      "phone": "+63 922 890 1234",
+      "website": "https://autocaregarage.com",
+      "image": "auto-care.jpg",
+      "membership": 2,
+      "industry": "Automotive",
+      "description": "Car repair and maintenance services with certified mechanics."
+    }
+  ]
+}
