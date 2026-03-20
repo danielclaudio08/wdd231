@@ -16,6 +16,16 @@ function displayMembers(members) {
   members.forEach(member => {
     const card = document.createElement("section");
 
+    let membershipLevel = "";
+
+    if (member.membership === 1) {
+      membershipLevel = "Member 1️⃣";
+    } else if (member.membership === 2) {
+      membershipLevel = "Silver 2️⃣";
+    } else if (member.membership === 3) {
+      membershipLevel = "Gold 3️⃣";
+    }
+
     card.innerHTML = `
       <h2>${member.name}</h2>
       <img src="images/${member.image}" alt="${member.name}">
@@ -26,6 +36,7 @@ function displayMembers(members) {
           ${member.name}
         </a>
       </p>
+      <p class="membership">Membership Level:&nbsp;<strong>${membershipLevel}</strong></p>
     `;
 
     container.appendChild(card);
