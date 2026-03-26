@@ -18,6 +18,16 @@
   --on-secondary: hsl(0, 0%, 0%);
 }
 
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 /* BASE */
 body {
   margin: 0;
@@ -346,6 +356,249 @@ main h1 {
 
 .dark #companies.list a {
   color: var(--primary);
+}
+
+/* HERO IMAGE FULL WIDTH - MOBILE & DESKTOP */
+.hero {
+  position: relative;
+  width: calc(100% + 2rem);
+  /* cancel 1rem left + 1rem right */
+  margin-left: -1rem;
+  margin-right: -1rem;
+  overflow: hidden;
+}
+
+.hero-img {
+  display: block;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* CTA BUTTON */
+.cta {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.cta a {
+  display: inline-block;
+  padding: 0.75rem 1rem;
+  background-color: var(--color-tertiary);
+  color: var(--color-primary);
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s ease;
+}
+
+.cta a:hover {
+  background-color: var(--color-primary);
+  color: var(--color-tertiary);
+  transform: scale(1.05);
+}
+
+.dark .cta a {
+  background-color: var(--primary);
+  color: var(--on-primary);
+}
+
+.dark .cta a:hover {
+  background-color: var(--color-primary);
+  color: var(--color-tertiary);
+}
+
+.home {
+  text-align: left;
+}
+
+section.events {
+  height: 200px;
+}
+
+/* ========== UNIFIED CARD CONTAINERS ========== */
+section.events,
+section.weather,
+section.forecast {
+  background: var(--color-primary);
+  border: 1px solid var(--color-secondary);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.dark section.events,
+.dark section.weather,
+.dark section.forecast {
+  background: var(--surface);
+  border: 1px solid var(--on-surface);
+  color: var(--on-surface);
+}
+
+/* Card headings */
+section.events h2,
+section.weather h2,
+section.forecast h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+/* Weather specific layout – image left, info right */
+section.weather {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    "heading heading"
+    "image info";
+  gap: 1rem;
+  align-items: start;
+}
+
+.weather h2 {
+  grid-area: heading;
+  margin-bottom: 0;
+}
+
+#weather-icon {
+  grid-area: image;
+  width: 80px;
+  height: auto;
+  filter: brightness(0) invert(1);
+  /* white icon for both themes (adjust as needed) */
+}
+
+.weather-info {
+  grid-area: info;
+  width: 100%;
+}
+
+.weather-info p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+  text-transform: capitalize;
+}
+
+/* Forecast cards as list items */
+#forecast {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+#forecast p {
+  padding: 0.6rem 1rem;
+  margin: 0;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+/* Spotlight inner cards */
+/* Remove any leftover outer card styling from the .spotlights section */
+section.spotlights {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin-bottom: 1rem;
+}
+
+section.spotlights h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+/* ========== SPOTLIGHT – UNIFIED WITH DIRECTORY GRID ========== */
+
+/* Outer container – same as #companies.grid on mobile */
+#spotlight-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* single column on mobile */
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Each spotlight card – identical to #companies section */
+#spotlight-container>section {
+  background: var(--color-primary);
+  border: 1px solid var(--color-secondary);
+  border-radius: 10px;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 85px 1fr;
+  gap: 0.5rem 1rem;
+  grid-template-areas:
+    "title title"
+    "img address"
+    "img phone"
+    "img url"
+    "img membership";
+  transition: all 0.2s ease;
+}
+
+.dark #spotlight-container>section {
+  background: var(--surface);
+  border: 1px solid var(--on-surface);
+  color: var(--on-surface);
+}
+
+/* Image styling – same as #companies img */
+#spotlight-container img {
+  grid-area: img;
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Company name (h3) – styled like #companies h2 */
+#spotlight-container h2 {
+  grid-area: title;
+  font-size: 1rem;
+  margin: 0 0 0.25rem 0;
+  text-align: center;
+}
+
+/* Text paragraphs – same as #companies p */
+#spotlight-container p {
+  font-size: 0.8rem;
+  line-height: 1.3;
+  margin: 0;
+  word-wrap: break-word;
+}
+
+/* Ellipsis for address and membership */
+#spotlight-container .address,
+#spotlight-container a {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Website link */
+#spotlight-container a {
+  color: var(--color-tertiary);
+  text-decoration: none;
+  word-break: break-all;
+  display: inline-block;
+  font-size: 0.8rem;
+  line-height: 1.3;
+}
+
+.dark #spotlight-container a {
+  color: var(--primary);
+}
+
+#spotlight-container a:hover {
+  text-decoration: underline;
 }
 
 /* FOOTER */

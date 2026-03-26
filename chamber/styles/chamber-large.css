@@ -216,6 +216,30 @@
     background: var(--surface);
   }
 
+  .hero {
+    margin-left: -6rem;
+    /* cancel main horizontal padding */
+    margin-right: -6rem;
+    width: calc(100% + 12rem);
+  }
+
+  .hero-img {
+    height: 70vh;
+    /* responsive height for desktop */
+    min-height: 400px;
+    /* minimum height */
+  }
+
+  .cta {
+    bottom: 2rem;
+    right: 2rem;
+  }
+
+  .cta a {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+  }
+
   /* FOOTER */
   .footer-container {
     display: flex;
@@ -252,6 +276,11 @@
 
     #companies.grid img {
       height: 150px;
+    }
+
+    .hero-img {
+      height: 75vh;
+      min-height: 450px;
     }
   }
 }

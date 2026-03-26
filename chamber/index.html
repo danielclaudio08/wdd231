@@ -4,13 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quezon City Chamber Directory</title>
-  <meta name="description" content="Directory of local businesses in Quezon City Chamber of Commerce">
+  <title>Quezon City Chamber of Commerce | Home</title>
+  <meta name="description"
+    content="Welcome to the Quezon City Chamber of Commerce. Learn about our mission, explore opportunities, and connect with local businesses and the community.">
   <meta name="author" content="Daniel Claudio">
 
-  <meta property="og:title" content="Quezon City Chamber Directory">
+  <meta property="og:title" content="Quezon City Chamber of Commerce Home Page">
   <meta property="og:description"
-    content="Discover a directory of local businesses, services, and members of the Quezon City Chamber of Commerce.">
+    content="Discover the Quezon City Chamber of Commerce, your gateway to local business connections, community engagement, and growth opportunities.">
   <meta property="og:image" content="https://danielclaudio08.github.io/wdd231/images/commerce-logo.svg">
   <meta property="og:url" content="https://danielclaudio08.github.io/wdd231/">
 
@@ -26,7 +27,7 @@
 
   <script src="scripts/navigation.js" defer></script>
   <script src="scripts/date.js" defer></script>
-  <script src="scripts/directory.js" defer></script>
+  <script src="scripts/home.js" defer></script>
 </head>
 
 <body>
@@ -50,18 +51,42 @@
   </header>
 
   <main>
-    <h1>Business Directory</h1>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <img src="images/hero-image.jpg" alt="Quezon City business district" class="hero-img">
+      <div class="cta">
+        <a href="join.html">Get Started Now</a>
+      </div>
+    </section>
 
-    <div class="view-buttons">
-      <button id="grid">
-        <img src="images/grid.svg" alt="Grid view" width="35">
-      </button>
-      <button id="list">
-        <img src="images/list.svg" alt="List view" width="35">
-      </button>
-    </div>
+    <h1 class="home">Home</h1>
+    <!-- EVENTS -->
+    <section class="events">
+      <h2>Events</h2>
+    </section>
 
-    <div id="companies" class="grid"></div>
+    <!-- WEATHER -->
+    <section class="weather">
+      <h2>Current Weather</h2>
+      <img id="weather-icon" src="" alt="">
+      <div class="weather-info">
+        <p><span id="temp"></span></p>
+        <p><span id="desc"></span></p>
+        <p><span id="temp-min"></span></p>
+        <p><span id="temp-max"></span></p>
+        <p><span id="humid"></span></p>
+      </div>
+    </section>
+
+    <section class="forecast">
+      <h2>Weather Forecast</h2>
+      <div id="forecast"></div>
+    </section>
+
+    <!-- SPOTLIGHT -->
+    <section class="spotlights">
+      <div id="spotlight-container"></div>
+    </section>
 
   </main>
 
