@@ -79,12 +79,16 @@
   }
 
   .hero-img {
-    height: 70vh;
-    min-height: 400px;
+    display: block;
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
   }
 
   .hero-message {
-    top: 2rem;
+    top: 0;
+    padding: 1rem 2rem;
+    max-width: 100%;
   }
 
   .hero-message h2 {
@@ -92,13 +96,13 @@
   }
 
   .cta {
-    bottom: 2rem;
-    right: 2rem;
+    bottom: 5rem;
+    right: 5rem;
   }
 
   .cta a {
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
+    padding: 1.5rem 2.5rem;
+    font-size: 1.5rem;
   }
 
   .home-cards {
@@ -189,12 +193,5 @@
 
   .accounts img {
     width: 60px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .hero-img {
-    height: 75vh;
-    min-height: 450px;
   }
 }
