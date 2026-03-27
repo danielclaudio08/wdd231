@@ -8,7 +8,7 @@
 :root.dark {
   --background: hsl(0, 0%, 7%);
   --surface: hsl(0, 0%, 7%);
-  --primary: hsl(265, 100%, 74%);
+  --primary: hsl(265, 100%, 80%);
   --primary-variant: hsl(265, 100%, 35%);
   --secondary: hsl(174, 100%, 43%);
 
