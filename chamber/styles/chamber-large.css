@@ -229,6 +229,10 @@
     margin: auto 5rem;
   }
 
+  .footer-right {
+    margin-top: 0;
+  }
+
   .accounts img {
     width: 60px;
     height: auto;
