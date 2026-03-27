@@ -18,6 +18,17 @@
   --on-secondary: hsl(0, 0%, 0%);
 }
 
+/* RESET / BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
 /* BASE */
 body {
   margin: 0;
