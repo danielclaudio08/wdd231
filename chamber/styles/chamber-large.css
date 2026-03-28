@@ -259,3 +259,24 @@
     }
   }
 }
+
+@media (min-width: 768px) and (max-width: 1200px) {
+
+  header {
+    padding: 1rem;
+  }
+
+  .footer-left {
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer-right {
+    margin: 0;
+    padding: 0;
+  }
+
+  .accounts {
+    padding: 1rem;
+  }
+}
