@@ -1,9 +1,13 @@
 /* ===== DESKTOP MEDIA QUERY ===== */
 @media (min-width: 768px) {
+
+  /* ===== HEADER FIX ===== */
   header {
     display: flex;
     align-items: center;
     padding: 1rem 5rem;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .site {
@@ -48,7 +52,6 @@
   }
 
   #dark-mode {
-    margin-left: 1rem;
     display: inline-flex;
   }
 
@@ -64,7 +67,9 @@
   }
 
   main {
-    margin: auto 5rem;
+    margin: 0 5rem;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   main h1 {
@@ -109,19 +114,40 @@
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     gap: 1rem;
-    align-items: stretch;
-    margin: 2rem 0;
   }
 
-  .home-cards>section {
-    margin-bottom: 0;
-    height: auto;
+  .events {
+    grid-column: 1;
+  }
+
+  .weather {
+    grid-column: 2;
+  }
+
+  .forecast {
+    grid-column: 3;
   }
 
   .event-list li,
   .weather-info p,
-  #forecast-list li {
+  #forecast-list li,
+  #spotlight-container h2,
+  #spotlight-container address,
+  #spotlight-container .phone,
+  #spotlight-container .membership {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     font-size: 1rem;
+  }
+
+  .weather-info,
+  .home-cards>section {
+    min-width: 0;
+  }
+
+  .home-cards>section {
+    min-width: 0;
   }
 
   #temp strong {
@@ -131,6 +157,7 @@
   section.spotlights h2 {
     text-align: left;
     margin-bottom: 1rem;
+    margin-top: 1rem;
   }
 
   /* Three‑column container for the cards */

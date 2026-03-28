@@ -240,8 +240,9 @@ main h1 {
 
 /* ===== CARDS (Events, Weather, Forecast) ===== */
 .home-cards {
-  display: block;
+  display: flex;
   margin: 1rem 0;
+  flex-direction: column;
 }
 
 section.events,
@@ -292,20 +293,19 @@ section.weather {
   grid-template-areas:
     "heading heading"
     "image info";
-  gap: 0;
-  align-items: start;
+  align-items: center;
 }
 
 .weather h2 {
   grid-area: heading;
-  margin-bottom: 0;
 }
 
 #weather-icon {
   grid-area: image;
   width: 75px;
   height: 75px;
-  padding-left: 1rem;
+  justify-self: center;
+  align-self: center;
 }
 
 .weather-info {
@@ -327,18 +327,16 @@ section.weather {
   font-weight: bold;
 }
 
-/* Forecast list */
-#forecast-list {
-  margin: 0;
-  padding-left: 1rem;
+ul#forecast-list {
+  padding: 0;
 }
 
 #forecast-list li {
   white-space: nowrap;
   overflow: hidden;
   text-transform: capitalize;
-  margin-bottom: 0.5rem;
   font-size: 0.8rem;
+  margin: 1rem;
 }
 
 .dark .event-list li,
