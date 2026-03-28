@@ -1,4 +1,10 @@
 @media (min-width: 768px) {
+
+  header {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
   #menu-button {
     display: none;
   }
@@ -96,6 +102,7 @@
     border-radius: 5px;
     display: block;
   }
+
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {
@@ -104,12 +111,7 @@
     padding: 1rem;
   }
 
-  .footer-left {
-    margin: 0;
-    padding: 0;
-  }
-
-  .footer-right {
+  footer {
     margin: 0;
     padding: 0;
   }
