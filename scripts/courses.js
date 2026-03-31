@@ -76,64 +76,82 @@ const courses = [
     ],
     completed: false
   }
-]
+];
+
+console.log(courses);
 
 const container = document.querySelector("#courses");
 const totalCredits = document.querySelector("#total-credits");
+const courseDetails = document.querySelector("#course-details");
 
+// Display courses in the container
 function displayCourses(courseList) {
-
   container.innerHTML = "";
 
   courseList.forEach(course => {
-
     const card = document.createElement("div");
     card.classList.add("course-card");
 
-    if (course.completed) {
-      card.classList.add("completed");
-    }
+    if (course.completed) card.classList.add("completed");
 
-    const check = course.completed ? "✅" : "";
-    card.textContent = `${check} ${course.subject} ${course.number}`;
+    const check = course.completed ? "✅ " : "";
+    card.textContent = `${check}${course.subject} ${course.number}`;
+
+    // Add click event to show modal with full details
+    card.addEventListener("click", () => {
+      displayCourseDetails(course);
+    });
 
     container.appendChild(card);
-
   });
 
-  const credits = courseList.reduce(
-    (total, course) => total + course.credits, 0
-  );
-
+  const credits = courseList.reduce((total, course) => total + course.credits, 0);
   totalCredits.textContent = `The total credits for this course listed below is ${credits}`;
+}
+
+// Show course details in modal
+function displayCourseDetails(course) {
+  courseDetails.innerHTML = `
+    <div class="modal-header">
+      <h2>${course.subject} ${course.number}</h2>
+      <button id="closeModal">❌</button>
+    </div>
+    <h3>${course.title}</h3>
+    <p><strong>Credits:</strong> ${course.credits}</p>
+    <p><strong>Certificate:</strong> ${course.certificate}</p>
+    <p>${course.description}</p>
+    <p><strong>Technologies:</strong> ${course.technology.join(", ")}</p>
+  `;
+
+  courseDetails.showModal();
+
+  const closeModal = document.querySelector("#closeModal");
+  closeModal.addEventListener("click", () => courseDetails.close());
+
 
 }
 
+// Filter buttons
 function setActiveFilter(buttonId) {
-  const buttons = document.querySelectorAll(".filters button")
-
-  buttons.forEach(button => {
-    button.classList.remove("active-filter");
-  });
-
+  document.querySelectorAll(".filters button").forEach(btn => btn.classList.remove("active-filter"));
   document.querySelector(`#${buttonId}`).classList.add("active-filter");
 }
 
+// Initial display
 displayCourses(courses);
 
+// Event listeners for filters
 document.querySelector("#all").addEventListener("click", () => {
   displayCourses(courses);
   setActiveFilter("all");
 });
 
-document.querySelector("#wdd").addEventListener("click", () => {
-  const filtered = courses.filter(course => course.subject === "WDD");
-  displayCourses(filtered);
-  setActiveFilter("wdd");
+document.querySelector("#cse").addEventListener("click", () => {
+  displayCourses(courses.filter(course => course.subject === "CSE"));
+  setActiveFilter("cse");
 });
 
-document.querySelector("#cse").addEventListener("click", () => {
-  const filtered = courses.filter(course => course.subject === "CSE");
-  displayCourses(filtered);
-  setActiveFilter("cse");
+document.querySelector("#wdd").addEventListener("click", () => {
+  displayCourses(courses.filter(course => course.subject === "WDD"));
+  setActiveFilter("wdd");
 });

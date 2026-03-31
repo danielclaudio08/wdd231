@@ -103,6 +103,68 @@
     display: block;
   }
 
+  #course-details {
+    margin: auto;
+    width: 60%;
+    height: auto;
+    max-height: 80vh;
+    padding: 2rem;
+    border-radius: 10px;
+  }
+
+  #course-details .modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 1rem;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--color-primary);
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    border-radius: 5px;
+  }
+
+  #course-details .modal-header h2 {
+    margin: 0;
+    font-size: 2rem;
+  }
+
+  #course-details #closeModal {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    background: none;
+    border: 1px solid var(--color-primary);
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--color-primary);
+  }
+
+  #course-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  #course-details p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    line-height: 1.5;
+  }
+
+  .course-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+  }
+
+  .course-card:hover {
+    transform: scale(1.05);
+    font-size: 1.2rem;
+  }
+
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {
