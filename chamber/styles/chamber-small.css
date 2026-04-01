@@ -260,6 +260,8 @@ main h1 {
 }
 
 #companies.grid .address,
+#companies.grid .phone,
+#companies.grid .url,
 #companies.grid .membership {
   white-space: nowrap;
   overflow: hidden;
