@@ -1,0 +1,367 @@
+/* ===== VARIABLES ===== */
+:root {
+  --color-primary: hsl(208, 50%, 90%);
+  --color-secondary: hsl(208, 50%, 10%);
+  --color-tertiary: hsl(268, 80%, 20%);
+  --light-primary: hsl(265, 100%, 80%);
+}
+
+:root.dark {
+  --background: hsl(0, 0%, 7%);
+  --surface: hsl(0, 0%, 7%);
+  --primary: hsl(265, 100%, 80%);
+  --on-background: hsl(0, 0%, 100%);
+  --on-surface: hsl(0, 0%, 100%);
+  --on-primary: hsl(0, 0%, 0%);
+}
+
+/* ===== GLOBAL ===== */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  line-height: 1.6;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--background, hsl(0, 0%, 100%));
+  color: var(--on-background, hsl(0, 0%, 0%));
+  transition: background-color 0.3s, color 0.3s;
+}
+
+main h1 {
+  text-align: center;
+  font-size: 20px;
+}
+
+header,
+h1,
+h2 {
+  font-family: "Inter", sans-serif;
+}
+
+/* ===== HEADER ===== */
+header {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark header {
+  background-color: var(--surface);
+  color: var(--on-surface);
+  border-bottom: 1px solid var(--color-primary);
+}
+
+.site {
+  display: contents;
+}
+
+.logo {
+  grid-column: 1;
+  grid-row: 1;
+  width: 100px;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.site-name {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#dark-mode {
+  grid-column: 3;
+  grid-row: 1;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#dark-mode img {
+  width: 25px;
+  height: 25px;
+}
+
+#menu-button {
+  background: none;
+  border-radius: 20%;
+  padding: 5px;
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dark #menu-button {
+  color: var(--on-surface);
+}
+
+nav {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  width: 100%;
+}
+
+.links {
+  background: var(--color-secondary);
+  border-radius: 10px;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: none;
+}
+
+.dark .links {
+  background: var(--surface);
+}
+
+.links.open {
+  display: block;
+}
+
+.links a {
+  display: block;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: var(--color-primary);
+  border-radius: 10px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.dark .links a {
+  color: var(--on-surface);
+}
+
+.links a:hover,
+.links a.active {
+  background-color: var(--color-primary);
+  color: var(--color-tertiary);
+  font-weight: bold;
+}
+
+.dark .links a:hover,
+.dark .links a.active {
+  background-color: var(--primary);
+  color: var(--on-primary);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  padding: 1rem;
+  margin-top: 2rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark footer {
+  background-color: var(--surface);
+  color: var(--on-surface);
+  border-top: 1px solid var(--color-primary);
+}
+
+.accounts {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem 0;
+}
+
+.accounts img {
+  width: 40px;
+  transition: transform 0.3s;
+  filter: brightness(0) invert(1);
+}
+
+.accounts img:hover {
+  transform: scale(1.1);
+}
+
+/* ===== MAIN LAYOUT (mobile) ===== */
+.join-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.join-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 1px solid var(--color-secondary);
+}
+
+.join-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+}
+
+/* ===== MODERN FORM DESIGN ===== */
+.join-form {
+  background: var(--color-primary);
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Labels */
+.join-form label {
+  font-size: 0.9rem;
+  color: var(--color-secondary);
+  gap: 0.3rem;
+}
+
+/* Inputs + textarea + select */
+.join-form input,
+.join-form select,
+.join-form textarea {
+  padding: 0.75rem 0.9rem;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+  outline: none;
+}
+
+/* Focus state (modern glow) */
+.join-form input:focus,
+.join-form select:focus,
+.join-form textarea:focus {
+  border-color: var(--color-secondary);
+}
+
+/* Placeholder */
+.join-form input::placeholder {
+  opacity: 0.6;
+}
+
+/* Submit button */
+.join-form input[type="submit"] {
+  margin-top: 1rem;
+  background: var(--color-tertiary);
+  color: var(--color-primary);
+  font-weight: bold;
+  border: none;
+  padding: 0.9rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.join-form input[type="submit"],
+.open-modal {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.join-form input[type="submit"]:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.membership-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.membership-cards {
+  flex-direction: column;
+}
+
+.card {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border-radius: 10px;
+  transform: translateY(50px);
+  animation: floatUp 1.5s forwards;
+  text-align: center;
+  height: 150px;
+  align-items: center;
+  border: 1px solid var(--color-secondary);
+}
+
+
+@keyframes floatUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dialog styling */
+dialog {
+  box-sizing: border-box;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+/* Backdrop effect */
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(2px);
+}
+
+/* Close button */
+dialog .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--color-tertiary);
+}
+
+/* Buttons styling */
+.open-modal {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-tertiary);
+  border: none;
+  border-radius: 5px;
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+/* Hover effect for dark mode */
+.join-form input[type="submit"]:hover,
+.open-modal:hover {
+  transform: translateY(-5%) scale(1.05);
+  background-color: var(--light-primary);
+  color: var(--on-primary);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+}
+
+:root.dark .join-form input[type="submit"]:hover,
+:root.dark .open-modal:hover {
+  transform: translateY(-5%) scale(1.05);
+  background-color: var(--primary);
+  color: var(--on-primary);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+}
