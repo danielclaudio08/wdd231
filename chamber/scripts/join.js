@@ -1,6 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
   const resultsDiv = document.querySelector('#results');
 
+  // Auto-fill timestamp on form submission
+  const form = document.querySelector('.join-form');
+  const timestampInput = document.querySelector('#timestamp');
+  if (form && timestampInput) {
+    form.addEventListener('submit', () => {
+      timestampInput.value = new Date().toLocaleString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        hour: "numeric",
+        minute: "2-digit",
+        hour12: true
+      });
+    });
+  }
+
   // Display submitted form info and submission date on the thank-you page
   if (resultsDiv) {
     const myInfo = new URLSearchParams(window.location.search);
