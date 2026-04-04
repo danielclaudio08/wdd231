@@ -155,8 +155,8 @@ nav {
 /* ===== THANK YOU PAGE ===== */
 .thankyou-container {
   max-width: 600px;
-  margin: 2rem auto;
-  padding: 1.5rem;
+  margin: 2rem 1rem;
+  padding: 1rem;
   text-align: center;
   background: var(--color-primary);
   border-radius: 12px;
@@ -167,6 +167,7 @@ nav {
 .dark .thankyou-container {
   background: var(--surface);
   color: var(--on-surface);
+  border: 1px solid var(--color-primary);
 }
 
 .thankyou-container h1 {

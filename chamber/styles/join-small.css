@@ -288,6 +288,7 @@ footer {
   height: 150px;
   align-items: center;
   border: 1px solid var(--color-secondary);
+  padding-bottom: 0.5rem;
 }
 
 .right-column h2 {

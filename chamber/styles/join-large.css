@@ -100,37 +100,14 @@
   .join-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
     padding: 2rem 5rem;
-    justify-items: center;
-    align-items: stretch;
-    gap: 2rem;
-  }
-
-  .left-column {
-    width: 90%;
-  }
-
-  .right-column {
-    height: 100%;
-    width: 100%;
-  }
-
-  .right-column {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .membership-cards {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
   }
 
   .card {
-    height: 175px;
+    height: auto;
     padding-bottom: 1rem;
-    align-content: center;
   }
 
   .open-modal {
