@@ -190,7 +190,6 @@ footer {
   transform: scale(1.1);
 }
 
-/* ===== MAIN LAYOUT (mobile) ===== */
 .join-container {
   display: flex;
   flex-direction: column;
@@ -203,30 +202,21 @@ footer {
   flex-direction: column;
   gap: 1rem;
   border: 1px solid var(--color-secondary);
-}
-
-.join-form label {
-  display: flex;
-  flex-direction: column;
-  font-weight: 500;
-}
-
-/* ===== MODERN FORM DESIGN ===== */
-.join-form {
   background: var(--color-primary);
   padding: 1.5rem;
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* Labels */
 .join-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
   font-size: 0.9rem;
   color: var(--color-secondary);
   gap: 0.3rem;
 }
 
-/* Inputs + textarea + select */
 .join-form input,
 .join-form select,
 .join-form textarea {
@@ -238,19 +228,16 @@ footer {
   outline: none;
 }
 
-/* Focus state (modern glow) */
 .join-form input:focus,
 .join-form select:focus,
 .join-form textarea:focus {
   border-color: var(--color-secondary);
 }
 
-/* Placeholder */
 .join-form input::placeholder {
   opacity: 0.6;
 }
 
-/* Submit button */
 .join-form input[type="submit"] {
   margin-top: 1rem;
   background: var(--color-tertiary);
@@ -277,10 +264,6 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-}
-
-.membership-cards {
-  flex-direction: column;
 }
 
 @keyframes floatUp {
@@ -348,7 +331,6 @@ footer {
 
 }
 
-/* Dialog styling */
 dialog {
   box-sizing: border-box;
   padding: 1rem;
@@ -360,13 +342,11 @@ dialog {
   color: var(--color-secondary);
 }
 
-/* Backdrop effect */
 dialog::backdrop {
   background-color: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(2px);
 }
 
-/* Close button */
 dialog .close {
   position: absolute;
   top: 10px;
@@ -378,7 +358,6 @@ dialog .close {
   color: var(--color-tertiary);
 }
 
-/* Buttons styling */
 .open-modal {
   cursor: pointer;
   padding: 0.5rem 1rem;
@@ -389,7 +368,6 @@ dialog .close {
   font-weight: bold;
 }
 
-/* Hover effect for dark mode */
 .join-form input[type="submit"]:hover,
 .open-modal:hover {
   transform: translateY(-5%) scale(1.05);

@@ -1,10 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
   const resultsDiv = document.querySelector('#results');
 
-  // Only populate #results if it exists (i.e., on thankyou.html)
+  // Display submitted form info and submission date on the thank-you page
   if (resultsDiv) {
     const myInfo = new URLSearchParams(window.location.search);
-    console.log(myInfo);
+    const timestamp = myInfo.get('timestamp') || new Date().toLocaleString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "numeric",
+      minute: "2-digit",
+      hour12: true
+    });
 
     resultsDiv.innerHTML = `
       <p><strong>First Name:</strong> ${myInfo.get('firstName') || 'N/A'}</p>
@@ -15,15 +22,11 @@ document.addEventListener("DOMContentLoaded", () => {
       <p><strong>Business/Organization Name:</strong> ${myInfo.get('businessName') || 'N/A'}</p>
       <p><strong>Membership Level:</strong> ${myInfo.get('membership') || 'N/A'}</p>
       <p><strong>Business/Organization Description:</strong> ${myInfo.get('description') || 'N/A'}</p>
-      <p><strong>Submission Date:</strong> ${myInfo.get('timestamp') || new Date().toLocaleString()}</p>
+      <p><strong>Submission Date:</strong> ${timestamp}</p>
     `;
-
-    // Update hidden timestamp field if it exists
-    const tsField = document.getElementById("timestamp");
-    if (tsField) tsField.value = new Date().toISOString();
   }
 
-  // Modal buttons (these exist on join.html, safe to run here)
+  // Modal buttons (exist on join.html)
   const openButtons = document.querySelectorAll(".open-modal");
   const dialogs = document.querySelectorAll("dialog");
 

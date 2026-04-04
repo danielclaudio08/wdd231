@@ -152,6 +152,70 @@ nav {
   color: var(--on-primary);
 }
 
+/* ===== THANK YOU PAGE ===== */
+.thankyou-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  text-align: center;
+  background: var(--color-primary);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--color-secondary);
+}
+
+.dark .thankyou-container {
+  background: var(--surface);
+  color: var(--on-surface);
+}
+
+.thankyou-container h1 {
+  margin-bottom: 0.5rem;
+}
+
+.thankyou-container p {
+  margin-bottom: 1.5rem;
+}
+
+#results {
+  text-align: left;
+  background: var(--color-secondary);
+  color: var(--color-primary);
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  word-wrap: break-word;
+}
+
+.dark #results {
+  background: var(--color-primary);
+  color: var(--on-primary);
+}
+
+#results p {
+  margin: 0.5rem 0;
+}
+
+.cta a {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-secondary);
+  color: var(--color-primary);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.cta a:hover {
+  background: var(--color-tertiary);
+  transform: translateY(-2px);
+}
+
+.dark .cta a {
+  background: var(--color-primary);
+  color: var(--on-primary);
+}
+
 /* ===== FOOTER ===== */
 footer {
   background-color: var(--color-secondary);

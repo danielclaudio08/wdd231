@@ -1,7 +1,6 @@
 /* ===== DESKTOP MEDIA QUERY ===== */
 @media (min-width: 768px) {
 
-  /* ===== HEADER FIX ===== */
   header {
     display: flex;
     align-items: center;

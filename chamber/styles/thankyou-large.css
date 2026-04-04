@@ -114,6 +114,25 @@
   }
 }
 
+.thankyou-container {
+  max-width: 800px;
+  padding: 2rem;
+  text-align: left;
+}
+
+.dark .thankyou-container {
+  border: 1px solid var(--color-primary);
+}
+
+#results {
+  font-size: 1.1rem;
+}
+
+.dark .cta a:hover {
+  background: var(--primary);
+  color: var(--on-primary);
+}
+
 /* ===== TABLET RANGE ADJUSTMENTS ===== */
 @media (min-width: 768px) and (max-width: 1200px) {
 
