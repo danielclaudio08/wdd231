@@ -1,26 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const resultsDiv = document.querySelector('#results');
-
-  // Auto-fill timestamp on form submission
-  const form = document.querySelector('.join-form');
-  const timestampInput = document.querySelector('#timestamp');
-  if (form && timestampInput) {
-    form.addEventListener('submit', () => {
-      timestampInput.value = new Date().toLocaleString("en-US", {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-        hour: "numeric",
-        minute: "2-digit",
-        hour12: true
-      });
-    });
-  }
-
-  // Display submitted form info and submission date on the thank-you page
-  if (resultsDiv) {
-    const myInfo = new URLSearchParams(window.location.search);
-    const timestamp = myInfo.get('timestamp') || new Date().toLocaleString("en-US", {
+  // ===== SET THE HIDDEN TIMESTAMP ON THE FORM PAGE =====
+  const timestampField = document.getElementById('timestamp');
+  if (timestampField) {
+    // Set current date/time when the form is loaded
+    const now = new Date();
+    const formattedTimestamp = now.toLocaleString("en-US", {
       year: "numeric",
       month: "long",
       day: "numeric",
@@ -28,6 +12,17 @@ document.addEventListener("DOMContentLoaded", () => {
       minute: "2-digit",
       hour12: true
     });
+    timestampField.value = formattedTimestamp;
+  }
+
+  // ===== DISPLAY SUBMITTED DATA ON THANK YOU PAGE =====
+  const resultsDiv = document.querySelector('#results');
+  if (resultsDiv) {
+    const myInfo = new URLSearchParams(window.location.search);
+
+    // IMPORTANT: Use ONLY the submitted timestamp (no fallback)
+    // The timestamp is always set by the form, so it will be present.
+    const submittedTimestamp = myInfo.get('timestamp') || 'Not provided';
 
     resultsDiv.innerHTML = `
       <p><strong>First Name:</strong> ${myInfo.get('firstName') || 'N/A'}</p>
@@ -38,11 +33,11 @@ document.addEventListener("DOMContentLoaded", () => {
       <p><strong>Business/Organization Name:</strong> ${myInfo.get('businessName') || 'N/A'}</p>
       <p><strong>Membership Level:</strong> ${myInfo.get('membership') || 'N/A'}</p>
       <p><strong>Business/Organization Description:</strong> ${myInfo.get('description') || 'N/A'}</p>
-      <p><strong>Submission Date:</strong> ${timestamp}</p>
+      <p><strong>Submission Date (when form was loaded):</strong> ${submittedTimestamp}</p>
     `;
   }
 
-  // Modal buttons (exist on join.html)
+  // ===== MODAL FUNCTIONALITY (only on join.html) =====
   const openButtons = document.querySelectorAll(".open-modal");
   const dialogs = document.querySelectorAll("dialog");
 
