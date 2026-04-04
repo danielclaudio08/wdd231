@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // ===== SET THE HIDDEN TIMESTAMP ON THE FORM PAGE =====
+  // SET THE HIDDEN TIMESTAMP ON THE FORM PAGE
   const timestampField = document.getElementById('timestamp');
   if (timestampField) {
     // Set current date/time when the form is loaded
@@ -15,29 +15,28 @@ document.addEventListener("DOMContentLoaded", () => {
     timestampField.value = formattedTimestamp;
   }
 
-  // ===== DISPLAY SUBMITTED DATA ON THANK YOU PAGE =====
+  // DISPLAY SUBMITTED DATA ON THANK YOU PAGE
   const resultsDiv = document.querySelector('#results');
   if (resultsDiv) {
     const myInfo = new URLSearchParams(window.location.search);
 
-    // IMPORTANT: Use ONLY the submitted timestamp (no fallback)
     // The timestamp is always set by the form, so it will be present.
-    const submittedTimestamp = myInfo.get('timestamp') || 'Not provided';
+    const submittedTimestamp = myInfo.get('timestamp');
 
     resultsDiv.innerHTML = `
-      <p><strong>First Name:</strong> ${myInfo.get('firstName') || 'N/A'}</p>
-      <p><strong>Last Name:</strong> ${myInfo.get('lastName') || 'N/A'}</p>
-      <p><strong>Organizational Title:</strong> ${myInfo.get('orgTitle') || 'N/A'}</p>
-      <p><strong>Email:</strong> ${myInfo.get('email') || 'N/A'}</p>
-      <p><strong>Mobile Phone:</strong> ${myInfo.get('phone') || 'N/A'}</p>
-      <p><strong>Business/Organization Name:</strong> ${myInfo.get('businessName') || 'N/A'}</p>
-      <p><strong>Membership Level:</strong> ${myInfo.get('membership') || 'N/A'}</p>
-      <p><strong>Business/Organization Description:</strong> ${myInfo.get('description') || 'N/A'}</p>
-      <p><strong>Submission Date (when form was loaded):</strong> ${submittedTimestamp}</p>
+      <p><strong>First Name:</strong> ${myInfo.get('firstName')}</p>
+      <p><strong>Last Name:</strong> ${myInfo.get('lastName')}</p>
+      <p><strong>Organizational Title:</strong> ${myInfo.get('orgTitle')}</p>
+      <p><strong>Email:</strong> ${myInfo.get('email')}</p>
+      <p><strong>Mobile Phone:</strong> ${myInfo.get('phone')}</p>
+      <p><strong>Business/Organization Name:</strong> ${myInfo.get('businessName')}</p>
+      <p><strong>Membership Level:</strong> ${myInfo.get('membership')}</p>
+      <p><strong>Business/Organization Description:</strong> ${myInfo.get('description')}</p>
+      <p><strong>Submission Date:</strong> ${submittedTimestamp}</p>
     `;
   }
 
-  // ===== MODAL FUNCTIONALITY (only on join.html) =====
+  // MODAL FUNCTIONALITY (only on join.html)
   const openButtons = document.querySelectorAll(".open-modal");
   const dialogs = document.querySelectorAll("dialog");
 
