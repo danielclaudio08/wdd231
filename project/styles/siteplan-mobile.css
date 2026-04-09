@@ -1,0 +1,217 @@
+/* GreenQC Hub Site Plan - Mobile First */
+:root {
+  --forest: #283618;
+  --olive: #606C38;
+  --bg: #FEFAE0;
+  --white: #FFFFFF;
+  --brown-light: #DDA15E;
+  --brown-dark: #6B3A10;
+  --text-dark: #283618;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-dark);
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5;
+  padding: 1rem;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: var(--forest);
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+h1 {
+  font-size: 1.8rem;
+  letter-spacing: -0.5px;
+  transition: all 0.2s ease;
+  display: inline-block;
+  margin-bottom: 0;
+  align-self: center;
+}
+
+/* Hover effect for "Site Plan" header */
+h1:hover {
+  color: var(--brown-light);
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+h2 {
+  font-size: 1.5rem;
+  padding-left: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+/* Header with logo */
+.site-header {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--olive);
+}
+
+.logo-container {
+  flex-shrink: 0;
+}
+
+.brand-logo {
+  width: 60px;
+  height: auto;
+  display: block;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Cards / sections */
+.plan-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.plan-card:hover {
+  box-shadow: 0 8px 20px rgba(188, 108, 37, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Lists */
+ul,
+.scenario-list {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Color palette swatches */
+.color-palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.color-swatch {
+  flex: 1 1 140px;
+  padding: 0.75rem;
+  border-radius: 16px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.85rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.primary-bg {
+  background-color: var(--forest);
+  color: var(--bg);
+}
+
+.secondary-bg {
+  background-color: var(--olive);
+  color: var(--bg);
+}
+
+.bg-bg {
+  background-color: var(--bg);
+  color: var(--forest);
+  border: 1px solid var(--olive);
+}
+
+.brown-light-bg {
+  background-color: var(--brown-light);
+  color: var(--forest);
+}
+
+.brown-dark-bg {
+  background-color: var(--brown-dark);
+  color: var(--bg);
+}
+
+/* Font demo */
+.font-demo {
+  display: inline-block;
+  background: #606C3810;
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.heading-font {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.body-font {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Images (wireframes, site map) */
+.image-frame {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.plan-image,
+.wireframe-img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+.caption {
+  font-size: 0.85rem;
+  color: var(--brown-dark);
+  text-align: center;
+  margin-top: 0.5rem;
+  font-weight: 600;
+  filter: brightness(0.4);
+}
+
+.wireframe-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.wireframe-item {
+  background: var(--bg);
+  padding: 0.5rem;
+  border-radius: 16px;
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+  body {
+    padding: 0.75rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .brand-logo {
+    width: 48px;
+  }
+}

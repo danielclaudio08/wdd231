@@ -1,0 +1,58 @@
+/* GreenQC Hub Site Plan - Desktop Styles */
+@media screen and (min-width: 768px) {
+  body {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .site-header {
+    margin-bottom: 2.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .brand-logo {
+    width: 120px;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .plan-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .wireframe-grid {
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .wireframe-item {
+    flex: 1;
+  }
+
+  .color-palette {
+    flex-wrap: nowrap;
+  }
+
+  .plan-card {
+    padding: 2rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .plan-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(188, 108, 37, 0.2);
+  }
+
+  .wireframe-img,
+  .plan-image {
+    transition: none;
+    box-shadow: none;
+  }
+}
