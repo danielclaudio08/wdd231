@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover Quezon City | Chamber of Commerce</title>
+  <meta name="description"
+    content="Explore attractions, local spots, and things to do in Quezon City. Discover places, experiences, and highlights curated by the Quezon City Chamber of Commerce.">
+  <meta name="author" content="Daniel Claudio">
+
+  <meta property="og:title" content="Discover Quezon City">
+  <meta property="og:description"
+    content="Find exciting places, attractions, and local highlights in Quezon City. Explore what the city has to offer through the Chamber of Commerce Discover page.">
+  <meta property="og:image" content="https://danielclaudio08.github.io/wdd231/images/commerce-logo.svg">
+  <meta property="og:url" content="https://danielclaudio08.github.io/wdd231/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <link rel="icon" href="../favicon.ico">
+
+  <link rel="stylesheet" href="styles/discover-small.css">
+  <link rel="stylesheet" href="styles/discover-medium.css">
+  <link rel="stylesheet" href="styles/discover-large.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="site">
+      <img src="images/commerce-logo.svg" alt="Chamber of Commerce Logo" class="logo">
+      <span class="site-name">Quezon City Chamber of Commerce</span>
+      <button id="menu-button" aria-label="Toggle Navigation Menu">&#9776;</button>
+    </div>
+    <nav>
+      <ul class="links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="discover.html">Discover</a></li>
+      </ul>
+    </nav>
+    <button id="dark-mode" aria-label="Toggle Dark Mode">
+      <img src="images/dark-mode.svg" alt="Dark mode icon" id="dark-icon">
+    </button>
+  </header>
+
+  <main>
+    <h1>Discover Quezon City</h1>
+    <div id="visitor-message"></div>
+    <div class="discover-grid" id="discover-grid"></div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <p>
+          <strong>Quezon City Chamber of Commerce</strong> <br>
+          Ground Floor, Finance Building <br>
+          Quezon City Hall Compound, Quezon City <br>
+          info@quezoncitycc.org <br>
+          +63975-461-8490
+        </p>
+      </div>
+
+      <nav class="accounts">
+        <a href="https://www.linkedin.com/in/danielclaudio/" target="_blank" rel="noopener noreferrer">
+          <img src="images/linkedin.svg" alt="Daniel Claudio LinkedIn profile">
+        </a>
+        <a href="https://github.com/danielclaudio08/wdd231" target="_blank" rel="noopener noreferrer">
+          <img src="images/github.svg" alt="Daniel Claudio GitHub repository">
+        </a>
+        <a href="https://www.facebook.com/claudio.daniel.843158" target="_blank" rel="noopener noreferrer">
+          <img src="images/facebook.svg" alt="Daniel Claudio Facebook account">
+        </a>
+      </nav>
+
+      <div class="footer-right">
+        <p>
+          WDD231 Class Project <br>
+          Daniel Claudio <br>
+          © <span id="currentyear"></span> Quezon City Chamber of Commerce<br>
+          Last Modification: <span id="lastModified"></span>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script src="scripts/discover.js" type="module"></script>
+
+</body>
+
+</html>

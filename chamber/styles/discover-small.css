@@ -1,0 +1,268 @@
+/* ===== VARIABLES ===== */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: hsl(208, 50%, 90%);
+  --color-secondary: hsl(208, 50%, 10%);
+  --color-tertiary: hsl(268, 80%, 20%);
+  --light-primary: hsl(265, 100%, 80%);
+}
+
+:root.dark {
+  --background: hsl(0, 0%, 7%);
+  --surface: hsl(0, 0%, 7%);
+  --primary: hsl(265, 100%, 80%);
+  --on-background: hsl(0, 0%, 100%);
+  --on-surface: hsl(0, 0%, 100%);
+  --on-primary: hsl(0, 0%, 0%);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  line-height: 1.6;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--background, hsl(0, 0%, 100%));
+  color: var(--on-background, hsl(0, 0%, 0%));
+  transition: background-color 0.3s, color 0.3s;
+}
+
+main h1 {
+  text-align: center;
+  font-size: 25px;
+}
+
+header,
+h1,
+h2 {
+  font-family: "Inter", sans-serif;
+}
+
+/* ===== HEADER ===== */
+header {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark header {
+  background-color: var(--surface);
+  color: var(--on-surface);
+  border-bottom: 1px solid var(--color-primary);
+}
+
+.site {
+  display: contents;
+}
+
+.logo {
+  grid-column: 1;
+  grid-row: 1;
+  width: 100px;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.site-name {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#dark-mode {
+  grid-column: 3;
+  grid-row: 1;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#dark-mode img {
+  width: 25px;
+  height: 25px;
+}
+
+#menu-button {
+  background: none;
+  border-radius: 20%;
+  padding: 5px;
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dark #menu-button {
+  color: var(--on-surface);
+}
+
+nav {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  width: 100%;
+}
+
+.links {
+  background: var(--color-secondary);
+  border-radius: 10px;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: none;
+}
+
+.dark .links {
+  background: var(--surface);
+}
+
+.links.open {
+  display: block;
+}
+
+.links a {
+  display: block;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: var(--color-primary);
+  border-radius: 10px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.dark .links a {
+  color: var(--on-surface);
+}
+
+.links a:hover,
+.links a.active {
+  background-color: var(--color-primary);
+  color: var(--color-tertiary);
+  font-weight: bold;
+}
+
+.dark .links a:hover,
+.dark .links a.active {
+  background-color: var(--primary);
+  color: var(--on-primary);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  padding: 1rem;
+  margin-top: 2rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark footer {
+  background-color: var(--surface);
+  color: var(--on-surface);
+  border-top: 1px solid var(--color-primary);
+}
+
+.accounts {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem 0;
+}
+
+.accounts img {
+  width: 40px;
+  transition: transform 0.3s;
+  filter: brightness(0) invert(1);
+}
+
+.accounts img:hover {
+  transform: scale(1.1);
+}
+
+/* ===== CARD GRID CONTAINER ===== */
+.discover-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* ===== CARD ===== */
+.card {
+  display: grid;
+  grid-template-areas:
+    "name"
+    "photo"
+    "description"
+    "location"
+    "cta";
+
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  grid-area: name;
+  margin: 0;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.card figure {
+  grid-area: photo;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.card img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  max-width: 100%;
+}
+
+.card p {
+  grid-area: description;
+}
+
+.card address {
+  grid-area: location;
+}
+
+.card button {
+  grid-area: cta;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--color-tertiary);
+  color: var(--color-primary);
+  margin-top: 0.5rem;
+  width: 100%;
+  max-width: 150px;
+  padding: 0.5rem;
+  justify-self: center;
+}
+
+#visitor-message {
+  text-align: center;
+  padding: 1rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}

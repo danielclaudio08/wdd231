@@ -1,0 +1,141 @@
+/* ===== DESKTOP MEDIA QUERY ===== */
+@media (min-width: 641px) and (max-width: 1024px) {
+
+  header {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 2rem;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .site {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    gap: 0.8rem;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .site-name {
+    font-size: 24px;
+  }
+
+  .links a {
+    padding: 0.25rem 0.5rem;
+  }
+
+  .links {
+    display: flex !important;
+    margin-top: 0;
+    background: none;
+  }
+
+  .links.open {
+    display: flex !important;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    width: auto;
+  }
+
+  nav .links {
+    display: flex;
+    gap: 0.4rem;
+    margin: 0;
+  }
+
+  #menu-button {
+    display: none;
+  }
+
+  #dark-mode {
+    display: inline-flex;
+  }
+
+  #dark-mode img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s ease;
+  }
+
+  #dark-mode img:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+  }
+
+  /* ===== FOOTER ===== */
+  .footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-left,
+  .footer-right {
+    margin: auto 1rem;
+  }
+
+  .accounts img {
+    width: 50px;
+  }
+
+  .card {
+    grid-template-areas:
+      "photo name"
+      "photo description"
+      "photo location"
+      "photo cta";
+  }
+
+  main h1 {
+    font-size: 28px;
+  }
+
+  .card h2 {
+    font-size: 1.3rem;
+  }
+
+  .card p,
+  .card address {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .card figure {
+    align-self: center;
+  }
+
+  .card img {
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .card button {
+    margin-top: 0.75rem;
+    max-width: 250px;
+    padding: 0.75rem 0.5rem;
+    width: 100%;
+    justify-self: center;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+  }
+
+  .card button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    filter: brightness(1.1);
+  }
+
+}
