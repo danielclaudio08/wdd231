@@ -241,47 +241,6 @@
     border-radius: 6px;
   }
 
-  /* ===== SPOTLIGHTS ===== */
-  section.spotlights h2 {
-    text-align: left;
-    margin: 1rem 0;
-  }
-
-  #spotlight-container {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-  }
-
-  #spotlight-container>section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "title title"
-      "img address"
-      "img phone"
-      "img url"
-      "img membership";
-    gap: 0.75rem 1rem;
-  }
-
-  #spotlight-container img {
-    grid-area: img;
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-
-  #spotlight-container h2 {
-    grid-area: title;
-    font-size: 1.2rem;
-    text-align: center;
-  }
-
-  #spotlight-container p,
-  #spotlight-container a.url {
-    font-size: 0.9rem;
-  }
-
   /* ===== ORGANIZATION CARDS ===== */
   #volunteers {
     display: grid;
@@ -339,6 +298,46 @@
     text-align: center;
     justify-self: center;
     width: 100%;
+  }
+
+  #volunteers.list .org-card {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "title title"
+      "desc desc"
+      "address phone"
+      "email email";
+
+    gap: 0.5rem 1rem;
+    align-items: start;
+  }
+
+  #volunteers.list .org-card h2 {
+    grid-area: title;
+    text-align: left;
+  }
+
+  #volunteers.list .org-card .desc {
+    grid-area: desc;
+    display: block;
+  }
+
+  #volunteers.list .org-card .org-address {
+    grid-area: address;
+  }
+
+  #volunteers.list .org-card .org-phone {
+    grid-area: phone;
+  }
+
+  #volunteers.list .org-card .org-email {
+    grid-area: email;
+  }
+
+  #volunteers.list .org-card img {
+    display: none;
   }
 
   /* ===== FOOTER ===== */
