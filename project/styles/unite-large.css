@@ -1,0 +1,124 @@
+/* ===== DESKTOP ===== */
+@media (min-width: 768px) {
+
+  /* ===== HEADER ===== */
+  header {
+    display: flex;
+    align-items: center;
+    padding: 1rem 5rem;
+  }
+
+  .site {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    gap: 1rem;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  .site-name {
+    font-size: 30px;
+  }
+
+  nav .links {
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    align-items: center;
+    background: none;
+  }
+
+  nav .links a {
+    padding: 0.5rem 1rem;
+    color: var(--white);
+  }
+
+  .links a:hover {
+    color: var(--white);
+  }
+
+  .links,
+  .links.open {
+    display: flex;
+  }
+
+  #menu-button {
+    display: none;
+  }
+
+  .join-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .join-form {
+    width: 100%;
+    min-width: 720px;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .join-form label {
+    margin-top: 1.2rem;
+  }
+
+  .join-form input,
+  .join-form select,
+  .join-form textarea {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  .join-form input[type="submit"] {
+    padding: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-top: 3rem;
+  }
+
+  /* ===== FOOTER ===== */
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5rem;
+  }
+
+  .footer-right a {
+    text-decoration: none;
+  }
+
+  .footer-right a:hover {
+    text-decoration: underline;
+  }
+
+  .accounts img {
+    width: 50px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
+  }
+
+  .accounts img:hover {
+    transform: scale(1.15);
+    animation: pop 0.3s ease;
+  }
+
+  @keyframes pop {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.2);
+    }
+
+    100% {
+      transform: scale(1.15);
+    }
+  }
+}

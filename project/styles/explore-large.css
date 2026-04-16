@@ -1,0 +1,133 @@
+@media (min-width: 768px) {
+
+  /* ===== HEADER ===== */
+  header {
+    display: flex;
+    align-items: center;
+    padding: 1rem 5rem;
+  }
+
+  .site {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    gap: 1rem;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  .site-name {
+    font-size: 30px;
+  }
+
+  nav .links {
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    align-items: center;
+    background: none;
+  }
+
+  nav .links a {
+    padding: 0.5rem 1rem;
+    color: var(--white);
+  }
+
+  .links a:hover {
+    color: var(--white);
+  }
+
+  .links,
+  .links.open {
+    display: flex;
+  }
+
+  #menu-button {
+    display: none;
+  }
+
+  .fun-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1.5rem;
+    row-gap: 2rem;
+
+    align-items: stretch;
+  }
+
+  .fun-card {
+    height: auto;
+  }
+
+  .fun-card img {
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+  }
+
+  .fun-card:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  }
+
+  .fun-card button {
+    max-width: 260px;
+    margin-top: auto;
+  }
+
+  .fun-card button {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+  }
+
+  .fun-card button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background: var(--olive);
+  }
+
+  .fun-card button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  /* ===== FOOTER ===== */
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5rem;
+  }
+
+  .footer-right a {
+    text-decoration: none;
+  }
+
+  .footer-right a:hover {
+    text-decoration: underline;
+  }
+
+  .accounts img {
+    width: 50px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
+  }
+
+  .accounts img:hover {
+    transform: scale(1.15);
+    animation: pop 0.3s ease;
+  }
+
+  @keyframes pop {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.2);
+    }
+
+    100% {
+      transform: scale(1.15);
+    }
+  }
+}

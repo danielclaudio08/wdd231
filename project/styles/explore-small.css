@@ -1,0 +1,272 @@
+:root {
+  --forest: #283618;
+  --olive: #606C38;
+  --bg: #FEFAE0;
+  --white: #FFFFFF;
+  --brown-light: #DDA15E;
+  --brown-dark: #6B3A10;
+  --text-dark: #283618;
+  --hero-overlay: rgba(0, 0, 0, 0.55);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--bg);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* ===== HEADER ===== */
+header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: var(--forest);
+  color: var(--white);
+}
+
+.site {
+  display: contents;
+}
+
+.logo {
+  grid-column: 1;
+  width: 100px;
+  object-fit: contain;
+}
+
+.site-name {
+  grid-column: 2;
+  font-weight: 700;
+}
+
+#menu-button {
+  grid-column: 3;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+nav {
+  grid-column: 1 / -1;
+}
+
+.links {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: none;
+  background: var(--brown-light);
+  border-radius: 10px;
+}
+
+.links.open {
+  display: block;
+}
+
+.links a {
+  display: block;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 1.2rem;
+  color: var(--forest);
+}
+
+.links a:hover {
+  background: var(--brown-light);
+  color: var(--forest);
+}
+
+.links a.active {
+  background: var(--brown-dark);
+  color: var(--white);
+  font-weight: 800;
+  border-radius: 6px;
+}
+
+.links a:focus {
+  outline: 3px solid var(--brown-light);
+  outline-offset: 2px;
+}
+
+/* ===== MAIN ===== */
+main {
+  padding: 0 1rem;
+}
+
+main h1 {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 30px;
+}
+
+/* ===== USER MESSAGE ===== */
+.user-alert {
+  background: var(--white);
+  border: 5px solid var(--olive);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* ===== FUN GRID ===== */
+.fun-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* ===== FUN CARD ===== */
+.fun-card {
+  background: var(--white);
+  border: 1px solid var(--olive);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.fun-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.fun-card h2 {
+  font-size: 1.1rem;
+  color: var(--forest);
+  margin: 0;
+}
+
+.fun-card .impact {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.fun-card button {
+  background: var(--forest);
+  color: var(--white);
+  border: none;
+  padding: 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+
+  width: 100%;
+  max-width: 220px;
+
+  align-self: center;
+  text-align: center;
+}
+
+.fun-card button:hover {
+  background: var(--olive);
+}
+
+/* ===== MODAL ===== */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  z-index: 999;
+}
+
+.modal.open {
+  display: flex;
+}
+
+.modal-content {
+  background: var(--white);
+  max-width: 420px;
+  width: 100%;
+  max-height: 80vh;
+  padding: 0.8rem;
+  border-radius: 8px;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+/* TITLE */
+.modal-content h2 {
+  font-size: 1.1rem;
+  margin: 0 0 0.3rem;
+  position: sticky;
+  top: 0;
+  background: var(--white);
+  padding-right: 1.5rem;
+}
+
+/* PARAGRAPHS */
+#modal-body p {
+  margin: 0.25rem 0;
+}
+
+/* CLOSE BUTTON */
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+
+  border: none;
+  background: var(--forest);
+  color: var(--white);
+  font-size: 0.9rem;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: var(--forest);
+  color: var(--white);
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.footer-right a {
+  color: var(--white);
+}
+
+.accounts {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.accounts img {
+  width: 40px;
+  filter: brightness(0) invert(1);
+}

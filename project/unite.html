@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>GreenQC Hub | Unite – Membership & Volunteer Application</title>
+  <meta name="description"
+    content="Join GreenQC Hub as a member or volunteer. Apply for community roles, environmental advocacy, and local sustainability initiatives in Quezon City.">
+  <meta name="author" content="Daniel Claudio">
+
+  <meta property="og:title" content="Unite with GreenQC Hub – Join the Movement">
+  <meta property="og:description"
+    content="Become a member or volunteer and help build a more sustainable Quezon City through community action and environmental programs.">
+  <meta property="og:image" content="https://danielclaudio08.github.io/wdd231/images/project-logo.png">
+  <meta property="og:url" content="https://danielclaudio08.github.io/wdd231/project/index.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="styles/unite-small.css">
+  <link rel="stylesheet" href="styles/unite-large.css">
+
+  <link rel="icon" href="project-fav.ico">
+
+  <script src="scripts/eco-navigation.js" defer></script>
+  <script src="scripts/unite.js" type="module"></script>
+</head>
+
+<body>
+  <header>
+    <div class="site">
+      <img src="images/project-logo.png" alt="GreenQC Hub leaf logo" class="logo">
+      <span class="site-name">GreenQC Hub</span>
+      <button id="menu-button" aria-label="Toggle Navigation Menu">&#9776;</button>
+    </div>
+    <nav>
+      <ul class="links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="eco-hub.html">Eco-Hub</a></li>
+        <li><a href="explore.html">Explore</a></li>
+        <li><a href="unite.html">Unite</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Join the Green Movement</h1>
+    <div class="join-container">
+      <div class="left-column">
+        <h2>Membership Application</h2>
+        <form method="get" action="thank-you.html" class="join-form" id="membershipForm">
+
+          <!-- Personal Info -->
+          <label>First Name
+            <input type="text" name="firstName" required autocomplete="given-name">
+          </label>
+
+          <label>Last Name
+            <input type="text" name="lastName" required autocomplete="family-name">
+          </label>
+
+          <label>Email Address
+            <input type="email" name="email" required autocomplete="email">
+          </label>
+
+          <label>Mobile Number
+            <input type="tel" name="phone" required placeholder="e.g. 09XXXXXXXXX">
+          </label>
+
+          <!-- Location (important for QC-based community) -->
+          <label>Barangay in Quezon City
+            <input type="text" name="barangay" required placeholder="e.g. Commonwealth, Batasan Hills">
+          </label>
+
+          <!-- Role / Identity -->
+          <label>I am a:
+            <select name="role" required>
+              <option value="">-- Select --</option>
+              <option value="student">Student</option>
+              <option value="resident">Resident</option>
+              <option value="professional">Professional</option>
+              <option value="organization">Organization Member</option>
+              <option value="volunteer">Volunteer</option>
+            </select>
+          </label>
+
+          <!-- Organization (optional but relevant) -->
+          <label>Organization / School (if any)
+            <input type="text" name="organization">
+          </label>
+
+          <!-- Environmental Interests -->
+          <label>Environmental Interests
+            <select name="interests" required>
+              <option value="">-- Select --</option>
+              <option value="waste">Waste Management & Recycling</option>
+              <option value="tree">Tree Planting & Urban Greening</option>
+              <option value="climate">Climate Action</option>
+              <option value="cleanups">Community Clean-Ups</option>
+              <option value="education">Environmental Education</option>
+            </select>
+          </label>
+
+          <!-- Volunteer Availability -->
+          <label>Availability for Activities
+            <select name="availability" required>
+              <option value="">-- Select --</option>
+              <option value="weekends">Weekends</option>
+              <option value="weekdays">Weekdays</option>
+              <option value="both">Both</option>
+              <option value="online">Online Only</option>
+            </select>
+          </label>
+
+          <!-- Membership Category -->
+          <label>How would you like to participate in GreenQC Hub?
+            <select name="participation" required>
+              <option value="">-- Select --</option>
+              <option value="member">Community Member</option>
+              <option value="volunteer">Active Volunteer</option>
+              <option value="advocate">Eco Advocate</option>
+              <option value="organizer">Event Organizer</option>
+            </select>
+          </label>
+
+          <!-- Motivation -->
+          <label>Why do you want to join GreenQC Hub?
+            <textarea name="motivation" rows="3"
+              placeholder="Share your interest in helping the environment..."></textarea>
+          </label>
+
+          <!-- Skills -->
+          <label>Skills you can contribute
+            <input type="text" name="skills" placeholder="e.g. organizing events, social media, teaching, planting">
+          </label>
+
+          <!-- Timestamp -->
+          <input type="hidden" name="timestamp" id="timestamp">
+
+          <input type="submit" value="Join the Movement">
+
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <p><strong>GreenQC Hub</strong><br>Greenfields 2, Quezon City<br>0924-5656-748</p>
+      </div>
+
+      <nav class="accounts">
+        <a href="https://www.linkedin.com/in/danielclaudio/" target="_blank" rel="noopener noreferrer">
+          <img src="images/linkedin.svg" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/danielclaudio08/wdd231" target="_blank" rel="noopener noreferrer">
+          <img src="images/github.svg" alt="GitHub">
+        </a>
+        <a href="https://www.facebook.com/claudio.daniel.843158" target="_blank" rel="noopener noreferrer">
+          <img src="images/facebook.svg" alt="Facebook">
+        </a>
+      </nav>
+
+      <div class="footer-right">
+        <p>Daniel Claudio<br>WDD 231 Project<br><a href="#">Video Demonstration</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
